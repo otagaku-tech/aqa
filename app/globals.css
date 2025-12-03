@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Fredoka:wght@400;500;600;700&display=swap');
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-jp text-text-primary bg-bg-primary;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply w-full max-w-[1200px] mx-auto px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-primary text-text-primary font-semibold rounded-full transition-all duration-300;
+  }
+  
+  .btn-primary:hover {
+    @apply bg-primary-dark text-white -translate-y-1 shadow-lg;
+  }
+  
+  .section-label {
+    @apply inline-block font-en text-sm font-semibold tracking-widest uppercase text-primary-dark px-4 py-1 bg-primary-light rounded-full;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-text-primary;
+  }
+  
+  .card {
+    @apply bg-bg-primary border-2 border-primary/30 rounded-2xl p-6 transition-all duration-300;
+  }
+  
+  .card:hover {
+    @apply border-primary -translate-y-2 shadow-xl shadow-primary/20;
+  }
+}
+
+/* Splash screen animation */
+.splash-letter {
+  @apply inline-block origin-center;
+}
+
+.splash-letter.animate {
+  animation: squash 2.4s ease 0.5s forwards;
+}
+
+@keyframes squash {
+  0%, 100% { transform: scaleY(1); }
+  10% { transform: scaleY(0); }
+  20% { transform: scaleY(1); }
+  35% { transform: scaleY(0); }
+  50% { transform: scaleY(1); }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-bg-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary-dark;
+}
+

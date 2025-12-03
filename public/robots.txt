@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://aqa.co.jp/sitemap.xml
+
